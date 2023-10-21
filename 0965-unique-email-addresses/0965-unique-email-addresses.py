@@ -1,12 +1,15 @@
-class Solution:
-    def numUniqueEmails(self, emails: List[str]) -> int:
-        uniqueMail=set()
-        for e in emails:
-            name,domain= e.split("@")
+class Solution(object):
+    def numUniqueEmails(self, emails):
+        """
+        :type emails: List[str]
+        :rtype: int
+        """
+        unque_set=set()
+        for email in emails:
+            name,domain=email.split('@')
+            name= name.split('+')[0]
             name=name.replace('.','')
-            name =name.split('+')[0]
-            uniqueMail.add((name,domain))
-        return len(uniqueMail)
-
-
+            unque_set.add((name,domain))
+        return len(unque_set)
+            
         
