@@ -7,12 +7,9 @@ class Solution:
       needel=0
       if rem > 0 :
         needel= k-rem
-
-
       for st in s:
           res.append(st)
       res=['']+res +[fill]*needel
-      print(res)
       temp =''
       for i in range(len(res)):
           temp +=res[i]
